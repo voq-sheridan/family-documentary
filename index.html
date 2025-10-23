@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Family Scroll Documentary</title>
+  <meta name="description" content="A scroll-driven interactive documentary with chapters, bilingual copy, audio cues, autoplay, and accessibility features." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#chap-mom">Skip to first chapter</a>
+
+  <header class="site-header" role="banner">
+    <div class="brand" aria-label="Site brand">
+      <span class="dot" aria-hidden="true"></span>
+      <span id="brandTitle">Family Documentary</span>
+    </div>
+    <nav class="controls" aria-label="Global controls">
+      <button id="btnAutoplay" aria-pressed="false" aria-label="Toggle autoplay">▶︎ Autoplay</button>
+      <button id="btnMute" aria-pressed="false" aria-label="Toggle mute">🔈 Mute</button>
+      <button id="btnFullscreen" aria-label="Enter fullscreen">⤢ Fullscreen</button>
+      <select id="selectLang" aria-label="Language">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
+    </nav>
+  </header>
+
+  <main id="app" role="main">
+    <!-- PROLOGUE -->
+    <section class="chapter" data-chapter="prologue" id="chap-prologue">
+      <div class="inner">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1549888834-3ec93abae044?q=80&w=1600&auto=format&fit=crop" alt="Old family photo on a table with warm light"/>
+          <div class="overlay" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <div class="kicker" data-i18n="prologue.kicker">Prologue</div>
+          <h2 class="title" data-i18n="prologue.title">Before we arrived</h2>
+          <p class="lede" data-i18n="prologue.lede">Fragments from airport farewells and first nights in a new country.</p>
+          <div class="actions">
+            <button class="play" data-audio="prologue" aria-label="Play/Pause chapter audio">▶︎ <span data-i18n="ui.playClip">Play clip</span></button>
+            <button class="transcript" data-target="prologue-tx" aria-expanded="false">📝 <span data-i18n="ui.viewTranscript">Transcript</span></button>
+          </div>
+          <details id="prologue-tx" class="tx"><summary data-i18n="ui.transcript">Transcript</summary>
+            <p data-i18n="prologue.tx">Two-minute narration placeholder. Replace with your recorded voiceover describing the family’s departure and first impressions.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOM -->
+    <section class="chapter" data-chapter="mom" id="chap-mom">
+      <div class="inner">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Portrait of a mother in a kitchen, soft morning light"/>
+        <div class="overlay" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <div class="kicker" data-i18n="mom.kicker">Chapter I</div>
+          <h2 class="title" data-i18n="mom.title">Mother — What I carried</h2>
+          <p class="lede" data-i18n="mom.lede">On recipes that traveled farther than luggage, and the quiet strength that held us.</p>
+          <div class="actions">
+            <button class="play" data-audio="mom" aria-label="Play/Pause chapter audio">▶︎ <span data-i18n="ui.playClip">Play clip</span></button>
+            <button class="transcript" data-target="mom-tx" aria-expanded="false">📝 <span data-i18n="ui.viewTranscript">Transcript</span></button>
+          </div>
+          <details id="mom-tx" class="tx"><summary data-i18n="ui.transcript">Transcript</summary>
+            <p data-i18n="mom.tx">Interview excerpt placeholder (≤2 minutes). Add captions text for accessibility and quick scanning.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- DAD -->
+    <section class="chapter" data-chapter="dad" id="chap-dad">
+      <div class="inner">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1488372759477-a7f4aa078cb6?q=80&w=1600&auto=format&fit=crop" alt="Father working at a desk with tools and notes"/>
+          <div class="overlay" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <div class="kicker" data-i18n="dad.kicker">Chapter II</div>
+          <h2 class="title" data-i18n="dad.title">Father — A map without labels</h2>
+          <p class="lede" data-i18n="dad.lede">Learning a city through bus routes, job postings, and Sunday parks.</p>
+          <div class="actions">
+            <button class="play" data-audio="dad" aria-label="Play/Pause chapter audio">▶︎ <span data-i18n="ui.playClip">Play clip</span></button>
+            <button class="transcript" data-target="dad-tx" aria-expanded="false">📝 <span data-i18n="ui.viewTranscript">Transcript</span></button>
+          </div>
+          <details id="dad-tx" class="tx"><summary data-i18n="ui.transcript">Transcript</summary>
+            <p data-i18n="dad.tx">Interview excerpt placeholder. Replace with your father’s story (≤2 minutes).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- BROTHER 1 -->
+    <section class="chapter" data-chapter="bro1" id="chap-bro1">
+      <div class="inner">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1600&auto=format&fit=crop" alt="Older brother walking between two buildings at dusk"/>
+          <div class="overlay" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <div class="kicker" data-i18n="bro1.kicker">Chapter III</div>
+          <h2 class="title" data-i18n="bro1.title">Older Brother — Between two worlds</h2>
+          <p class="lede" data-i18n="bro1.lede">Balancing work, language, and the pull of home.</p>
+          <div class="actions">
+            <button class="play" data-audio="bro1" aria-label="Play/Pause chapter audio">▶︎ <span data-i18n="ui.playClip">Play clip</span></button>
+            <button class="transcript" data-target="bro1-tx" aria-expanded="false">📝 <span data-i18n="ui.viewTranscript">Transcript</span></button>
+          </div>
+          <details id="bro1-tx" class="tx"><summary data-i18n="ui.transcript">Transcript</summary>
+            <p data-i18n="bro1.tx">Interview excerpt placeholder. Replace with your older brother’s story (≤2 minutes).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- BROTHER 2 -->
+    <section class="chapter" data-chapter="bro2" id="chap-bro2">
+      <div class="inner">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1481437642641-2f0ae875f836?q=80&w=1600&auto=format&fit=crop" alt="Younger brother on a city bus looking out the window"/>
+          <div class="overlay" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <div class="kicker" data-i18n="bro2.kicker">Chapter IV</div>
+          <h2 class="title" data-i18n="bro2.title">Younger Brother — A new rhythm</h2>
+          <p class="lede" data-i18n="bro2.lede">School bells, part-time jobs, and late-night group chats.</p>
+          <div class="actions">
+            <button class="play" data-audio="bro2" aria-label="Play/Pause chapter audio">▶︎ <span data-i18n="ui.playClip">Play clip</span></button>
+            <button class="transcript" data-target="bro2-tx" aria-expanded="false">📝 <span data-i18n="ui.viewTranscript">Transcript</span></button>
+          </div>
+          <details id="bro2-tx" class="tx"><summary data-i18n="ui.transcript">Transcript</summary>
+            <p data-i18n="bro2.tx">Interview excerpt placeholder. Replace with your younger brother’s story (≤2 minutes).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- EPILOGUE -->
+    <section class="chapter" data-chapter="epilogue" id="chap-epilogue">
+      <div class="inner">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop" alt="Family walking together in a park, evening light"/>
+          <div class="overlay" aria-hidden="true"></div>
+        </div>
+        <div class="content">
+          <div class="kicker" data-i18n="epilogue.kicker">Epilogue</div>
+          <h2 class="title" data-i18n="epilogue.title">What we keep</h2>
+          <p class="lede" data-i18n="epilogue.lede">Small rituals, shared meals, and a language that grows with us.</p>
+          <div class="actions">
+            <button class="play" data-audio="epilogue" aria-label="Play/Pause chapter audio">▶︎ <span data-i18n="ui.playClip">Play clip</span></button>
+            <button class="transcript" data-target="epilogue-tx" aria-expanded="false">📝 <span data-i18n="ui.viewTranscript">Transcript</span></button>
+          </div>
+          <details id="epilogue-tx" class="tx"><summary data-i18n="ui.transcript">Transcript</summary>
+            <p data-i18n="epilogue.tx">Closing narration placeholder (≤2 minutes). Summarize transformation and gratitude.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="credits" aria-label="Credits">
+      <p>© <span id="year"></span> Your Name. <span data-i18n="credits.madeWith">Made with HTML, CSS, and JS. Audio described, captions available.</span></p>
+    </div>
+  </main>
+
+  <!-- LIBS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.37/bundled/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.core.min.js"></script>
+
+  <!-- APP -->
+  <script src="script.js"></script>
+</body>
+</html>
 
