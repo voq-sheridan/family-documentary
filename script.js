@@ -1,28 +1,4 @@
-// Language Switcher
-function setLanguage(lang) {
-    document.body.className = lang === 'fr' ? 'lang-fr' : '';
-    
-    // Update active button
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    event.target.classList.add('active');
-    
-    // Save preference
-    localStorage.setItem('preferredLanguage', lang);
-}
-
-// Load saved language preference
-window.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-    if (savedLang === 'fr') {
-        document.body.className = 'lang-fr';
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.textContent === 'FR') btn.classList.add('active');
-        });
-    }
-});
+// Single-language site (English). Language switcher removed.
 
 // ===== SMOOTH PROGRESSIVE SCROLL ANIMATION SYSTEM =====
 
